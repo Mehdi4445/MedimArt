@@ -20,10 +20,9 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Mehdi</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-            <br className="sm:block hidden" /> sed do eiusmod tempor incididunt
-            ut <br className="sm:block hidden" /> labore et dolore magna aliqua.
-            Sit amet consectetur adipiscing elit ut.
+            24 years old, passionate web developer with expertise in UX/UI design. My background has allowed me to master
+            programming languages, as well as popular
+            frameworks.
           </p>
         </div>
       </div>
@@ -34,15 +33,15 @@ const Hero = () => {
             className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary
           flex justify-center items-start p-2"
           >
-            <motion.dev 
-                animate={{ y: [0, 24, 0] }}
-                transition={{
-                          duration: 1.5,
-                          repeat: Infinity,
-                          repeatType: 'loop'
-                }}
-                className="w-3 h-3 rounded-full bg-secondary mb-1"/>
-
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
           </div>
         </a>
       </div>

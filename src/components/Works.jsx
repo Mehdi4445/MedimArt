@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { git, github } from "../assets";
+import { behance } from "../assets";
+import { webb } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -13,6 +15,7 @@ const ProjectCard = ({
   description,
   tags,
   source_code_link,
+  presentation_link,
   image,
 }) => {
   return (
@@ -39,6 +42,21 @@ const ProjectCard = ({
               <img
                 src={github}
                 alt="github"
+                className="w-1/2 h-1/2 object-contain"
+              />
+              <img
+                src={webb}
+                alt="webb"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+            <div
+              onClick={() => window.open(presentation_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mx-1"
+            >
+              <img
+                src={behance}
+                alt="behance"
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
@@ -73,9 +91,8 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
-          consectetur adipiscing elit ut.
+          Here I present you my latest work. You can find online links or github
+          repository and a Behance presentation for every project.{" "}
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">

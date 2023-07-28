@@ -28,64 +28,34 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Fill in your name please"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
-                  rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Fill in your email please"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
-                  rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your message</span>
-            <textarea
-            rows="7"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Fill in your message please"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white 
-                  rounded-lg outlined-none border-none font-medium"
-            />
-          </label>
-
-          <button type="submit"
-              className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold
-              shadow-md shadow-primary rounded-xl">
-                {loading ? 'Sending...' : 'Send'}
-              </button>
-
-        </form>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+          You can contact me via :
+          <li
+            className="text-white-100 text-[14px]
+              pl-1 tracking-wider"
+          >
+            my email address :{" "}
+            <span className="green-pink-gradient">
+              medimegh.mehdi99[@]gmail.com
+            </span>
+          </li>
+          <li
+            className="text-white-100 text-[14px]
+              pl-1 tracking-wider"
+          >
+            my linkedin :{" "}
+            <span>
+              <a href="https://www.linkedin.com/in/mehdi-medimegh/" target="__blank">Medimegh Mehdi</a>
+            </span>
+          </li>
+        </ul>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-          <EarthCanvas />
-
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
       </motion.div>
     </div>
   );
